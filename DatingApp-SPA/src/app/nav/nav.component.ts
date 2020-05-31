@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
-import { error } from 'protractor';
 
 @Component({
   selector: 'app-nav',
@@ -20,7 +19,7 @@ export class NavComponent implements OnInit {
     this.authService.login(this.model).subscribe(next => {
       console.log('success');
     }, error => {
-      console.log('error');
+      console.log(error);
     });
   }
 
